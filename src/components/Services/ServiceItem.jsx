@@ -1,15 +1,17 @@
-import  { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './styles.css'
+import './styles.css';
 
 function ServiceItem({ image, title, description, animationClass }) {
   const serviceItemRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = serviceItemRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          serviceItemRef.current.classList.add('visible');
+          currentRef.classList.add('visible');
           observer.disconnect();
         }
       },
@@ -18,13 +20,13 @@ function ServiceItem({ image, title, description, animationClass }) {
       }
     );
 
-    if (serviceItemRef.current) {
-      observer.observe(serviceItemRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (observer && serviceItemRef.current) {
-        observer.unobserve(serviceItemRef.current);
+      if (observer && currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

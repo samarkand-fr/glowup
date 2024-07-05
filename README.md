@@ -1,8 +1,49 @@
-# React + Vite
+# GlowUp - Enhance Your Beauty Routine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GlowUp is a comprehensive beauty application that helps you unleash your inner radiance. This application offers personalized skincare routines, product recommendations, virtual makeovers, and AI skin analysis, along with user reviews and testimonials.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Services](#services)
+- [User Reviews](#user-reviews)
+- [Side Navigation](#side-navigation)
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Features
+
+- **Personalized Skincare**
+- **Track Progress**
+- **Expert Support**
+
+## Services
+
+- **Customized Routines**
+- **Product Recommendations**
+- **Virtual Makeover**
+- **AI Skin Analysis**
+
+## User Reviews
+
+Hear what our users have to say
+
+## Side Navigation
+
+The side navigation menu provides easy access to different sections of the application, including Home, Features, Services, Reviews, and Contact.
+
+## Installation
+
+To get started with GlowUp, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/glowup.git
+2. Navigate to the project directory:
+     ```bash
+     cd glowup
+3. Install the dependencies:
+    npm install
+
+## Usage
+    npm run dev

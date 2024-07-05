@@ -1,8 +1,8 @@
-import  { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagic, faLineChart, faUserMd } from '@fortawesome/free-solid-svg-icons';
-import './styles.css'
+import './styles.css';
 
 const iconMap = {
   'fa-magic': faMagic,
@@ -14,10 +14,12 @@ function FeatureItem({ title, icon, text, iconClassName = '', animationDelay = '
   const featureItemRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = featureItemRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          featureItemRef.current.classList.add('visible');
+          currentRef.classList.add('visible');
           observer.disconnect();
         }
       },
@@ -26,13 +28,13 @@ function FeatureItem({ title, icon, text, iconClassName = '', animationDelay = '
       }
     );
 
-    if (featureItemRef.current) {
-      observer.observe(featureItemRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (observer && featureItemRef.current) {
-        observer.unobserve(featureItemRef.current);
+      if (observer && currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
