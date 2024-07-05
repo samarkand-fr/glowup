@@ -1,3 +1,4 @@
+import  { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagic, faLineChart, faUserMd } from '@fortawesome/free-solid-svg-icons';
@@ -8,9 +9,35 @@ const iconMap = {
   'fa-user-md': faUserMd,
 };
 
-function FeatureItem({ title, icon, text, iconClassName, animationDelay }) {
+function FeatureItem({ title, icon, text, iconClassName = '', animationDelay = '0s' }) {
+  const featureItemRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          featureItemRef.current.classList.add('visible');
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (featureItemRef.current) {
+      observer.observe(featureItemRef.current);
+    }
+
+    return () => {
+      if (observer && featureItemRef.current) {
+        observer.unobserve(featureItemRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="feature-item" style={{ animationDelay }}>
+    <div ref={featureItemRef} className="feature-item" style={{ animationDelay }}>
       <h1>{title}</h1>
       <div className="features-desc">
         <div className="features-icon">
@@ -30,11 +57,6 @@ FeatureItem.propTypes = {
   text: PropTypes.string.isRequired,
   iconClassName: PropTypes.string,
   animationDelay: PropTypes.string,
-};
-
-FeatureItem.defaultProps = {
-  iconClassName: '',
-  animationDelay: '0s',
 };
 
 export default FeatureItem;

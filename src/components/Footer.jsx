@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faAndroid, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
+import beautyfooter from '../assets/images/beauty-footer.png'
 
 function Footer() {
   return (
     <section id="footer">
-      <img src="images/beauty-footer.jpg" alt="Beauty Footer" className="footer-img" />
+      <img src={beautyfooter} alt="Beauty Footer" className="footer-img" />
       <div className="title-text">
         <p>Contact</p>
         <h1>Get Glowing Today</h1>

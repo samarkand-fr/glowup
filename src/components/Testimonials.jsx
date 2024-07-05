@@ -1,9 +1,17 @@
-
-import user1 from "../assets/images/user1.jpg" 
-import user2 from "../assets/images/user2.jpg" 
-import user3 from "../assets/images/user3.jpg" 
+import  { useEffect } from 'react';
+import user1 from "../assets/images/user1.jpg";
+import user2 from "../assets/images/user2.jpg";
+import user3 from "../assets/images/user3.jpg";
+import TestimonialItem from './TestimonialItem'
 
 function Testimonials() {
+  useEffect(() => {
+    const elements = document.querySelectorAll('.title-text p, .title-text h1');
+    elements.forEach((element, index) => {
+      element.style.animationDelay = `${index * 3.5}s`;
+    });
+  }, []);
+
   return (
     <section id="testimonials">
       <div className="title-text">
@@ -20,7 +28,7 @@ function Testimonials() {
         <TestimonialItem 
           image={user2}
           name="Whitney Thompson" 
-          username="@whitenythompson" 
+          username="@whitneythompson" 
           text="The personalized recommendations are spot-on. I've never felt more confident about my skin." 
         />
         <TestimonialItem 
@@ -34,19 +42,5 @@ function Testimonials() {
   );
 }
 
-function TestimonialItem({ image, name, username, text }) {
-  return (
-    <div className="testimonial-col">
-      <div className="user">
-        <img src={image} alt={name} />
-        <div className="user-info">
-          <h4>{name}<i className="fa fa-star"></i></h4>
-          <small>{username}</small>
-        </div>
-      </div>
-      <p>{text}</p>
-    </div>
-  );
-}
 
 export default Testimonials;

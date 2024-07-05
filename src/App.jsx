@@ -7,8 +7,9 @@ import Footer from './components/Footer';
 import './styles.css';
 
 function App() {
+
   return (
-    <div className="App">
+    <div className="App ">
       <Banner />
       <SideNav />
       <Features />
