@@ -1,7 +1,8 @@
-import bannerPart1 from '../assets/images/banner-part1.jpg';
-import bannerPart2 from '../assets/images/banner-part2.jpg';
-import bannerPart3 from '../assets/images/banner-part3.jpg';
-import bannerPart4 from '../assets/images/banner-part4.jpg';
+import bannerPart1 from '../../assets/images/banner-part1.jpg';
+import bannerPart2 from '../../assets/images/banner-part2.jpg';
+import bannerPart3 from '../../assets/images/banner-part3.jpg';
+import bannerPart4 from '../../assets/images/banner-part4.jpg';
+import './styles.css'
 
 function Banner() {
   return (

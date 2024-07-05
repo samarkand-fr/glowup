@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import closeImage from "../assets/images/close.png";
-import menuImage from "../assets/images/menu.png";
-
+import closeImage from "../../assets/images/close.png";
+import menuImage from "../../assets/images/menu.png";
+import './styles.css'
 
 function SideNav() {
   const [isOpen, setIsOpen] = useState(false);

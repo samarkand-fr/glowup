@@ -1,5 +1,6 @@
 import  { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import './styles.css'
 
 function ServiceItem({ image, title, description, animationClass }) {
   const serviceItemRef = useRef(null);

@@ -1,8 +1,9 @@
 import ServiceItem from './ServiceItem';
-import customizedImage from "../assets/images/beauty-3.jpg";
-import recommendationImage from "../assets/images/beauty-4.jpg";
-import makeoverImage from "../assets/images/beauty-5.jpg";
-import analysImage from "../assets/images/beauty-6.jpg";
+import customizedImage from "../../assets/images/beauty-3.jpg";
+import recommendationImage from "../../assets/images/beauty-4.jpg";
+import makeoverImage from "../../assets/images/beauty-5.jpg";
+import analysImage from "../../assets/images/beauty-6.jpg";
+import './styles.css'
 
 function Services() {
   return (

@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple, faAndroid, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
-import beautyfooter from '../assets/images/beauty-footer.png'
+import beautyfooter from '../../assets/images/beauty-footer.png'
+import './styles.css'
 
 function Footer() {
   return (

@@ -1,6 +1,7 @@
 
 import FeatureItem from './FeatureItem';
-import featureImage from "../assets/images/beauty-2.jpg";
+import featureImage from "../../assets/images/beauty-2.jpg";
+import './styles.css'
 
 function Features() {
   return (

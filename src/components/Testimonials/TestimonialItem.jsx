@@ -1,3 +1,5 @@
+import './styles.css'
+
 import PropTypes from 'prop-types';
 function TestimonialItem({ image, name, username, text }) {
     return (

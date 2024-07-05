@@ -1,8 +1,9 @@
 import  { useEffect } from 'react';
-import user1 from "../assets/images/user1.jpg";
-import user2 from "../assets/images/user2.jpg";
-import user3 from "../assets/images/user3.jpg";
+import user1 from "../../assets/images/user1.jpg";
+import user2 from "../../assets/images/user2.jpg";
+import user3 from "../../assets/images/user3.jpg";
 import TestimonialItem from './TestimonialItem'
+import './styles.css'
 
 function Testimonials() {
   useEffect(() => {

@@ -4,7 +4,7 @@ import Features from './components/Features';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
-import './styles.css';
+import './App.css';
 
 function App() {
 
