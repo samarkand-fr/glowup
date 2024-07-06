@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import closeImage from "../../assets/images/close.png";
 import menuImage from "../../assets/images/menu.png";
-import './styles.css'
+import './styles.css';
 
 function SideNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   };
 
   return (

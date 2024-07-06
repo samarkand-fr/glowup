@@ -1,146 +1,184 @@
-
 #banner {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .banner-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    z-index: -2;
-  }
-  
-  .banner-part {
-    position: absolute;
-    width: 25%; /* Assuming 4 parts */
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    animation: reveal 2s forwards;
-  }
-  
-  .part1 {
-    left: 0;
-    animation-delay: 0s;
-  }
-  
-  .part2 {
-    left: 25%;
-    animation-delay: 0.5s;
-  }
-  
-  .part3 {
-    left: 50%;
-    animation-delay: 1s;
-  }
-  
-  .part4 {
-    left: 75%;
-    animation-delay: 1.5s;
-  }
-  
-  @keyframes reveal {
-    to {
-      opacity: 1;
-    }
-  }
-  
-  #banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(135, 81, 123, 0.4), rgba(248, 243, 248, 0.253));
-    z-index: -1; 
-  }
-  
-  .banner-text {
-    z-index: 1;
-  }
-  
-  .banner-btn a span {
-    margin-right: 10px;
-  }
-  
-  .logo {
-    width: 120px;
-    position: absolute;
-    top: 3%;
-    left: 3%;
-    color: var(--btn-color); 
-  }
-  
-  .banner-text h1 {
-    font-size: 80px;
-    font-family: 'Kaushan Script', cursive;
-  }
-  
-  .banner-text p {
-    font-size: 20px;
-    font-style: italic;
-  }
-  
-  .banner-btn {
-    margin: 70px auto 0;
-  }
-  
-  .banner-btn a {
-    text-decoration: none;
-    width: 150px;
-    color: #fff;
-    margin: 0 10px;
-    border: 0.5px solid #fff;
-    padding: 12px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s;
-  }
-  
-  .banner-btn a span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--btn-color);
-    z-index: -1;
-    transition: width 0.5s;
-  }
-  
-  .banner-btn a:hover span {
-    width: 100%;
-  }
-  
-  .banner-btn a:hover {
-    color: #150118;
-  }
-
-  /* responsive */
-  @media only screen and (max-width: 700px){
-    .banner-text h1{
-        font-size:44px;
-    }
-    .banner-btn a{
-        display:block;
-        margin : 20px auto;
-    }
-    .logo{
-        width:18%;
-      
-    }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -2;
+}
+
+.banner-part {
+  position: absolute;
+  width: 25%; /* Assuming 4 parts */
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: reveal 2s forwards;
+}
+
+.part1 {
+  left: 0;
+  animation-delay: 0s;
+}
+
+.part2 {
+  left: 25%;
+  animation-delay: 0.5s;
+}
+
+.part3 {
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.part4 {
+  left: 75%;
+  animation-delay: 1.5s;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+}
+
+.full-banner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+#banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(135, 81, 123, 0.4), rgba(248, 243, 248, 0.253));
+  z-index: -1; 
+}
+
+.banner-text {
+  z-index: 1;
+}
+
+.banner-btn a span {
+  margin-right: 10px;
+}
+
+.logo {
+  width: 120px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: var(--btn-color); 
+}
+
+.banner-text h1 {
+  font-size: 80px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text p {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.banner-btn {
+  margin: 70px auto 0;
+}
+
+.banner-btn a {
+  text-decoration: none;
+  width: 150px;
+  color: #fff;
+  margin: 0 10px;
+  border: 0.5px solid #fff;
+  padding: 12px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+}
+
+.banner-btn a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--btn-color);
+  z-index: -1;
+  transition: width 0.5s;
+}
+
+.banner-btn a:hover span {
+  width: 100%;
+}
+
+.banner-btn a:hover {
+  color: #150118;
+}
+
+/* responsive */
+@media only screen and (max-width: 700px) {
+  .banner-text h1 {
+    font-size: 44px;
+  }
+  .banner-btn a {
+    display: block;
+    margin: 20px auto;
+  }
+  .logo {
+    width: 18%;
+  }
+  .banner-part {
+    display: none;
+  }
+  .full-banner {
+    display: block;
+  }
+}
+
+/* responsive */
+@media only screen and (max-width: 700px) {
+  .banner-text h1 {
+    font-size: 44px;
+    line-height: 1.2; /* Adjust line height */
+    padding: 0 10px; /* Add padding to avoid cutting off */
+  }
+  .banner-btn a {
+    display: block;
+    margin: 20px auto;
+  }
+  .logo {
+    width: 18%;
+  }
+  .banner-part {
+    display: none;
+  }
+  .full-banner {
+    display: block;
+  }
+}
+

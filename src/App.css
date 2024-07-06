@@ -1,65 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:  'Poppins', sans-serif;
-}
-:root{
-    --back-color:#e4e0dd;
-    --btn-color:#b2679ff5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-
-/* @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+:root {
+  --back-color: #e4e0dd;
+  --btn-color: #b2679ff5;
 }
 
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: var(--btn-color);
-    }
+body {
+  cursor: url('./assets/images/magic-stick.png') 16 16, auto !important;
 }
 
-.title-text p, .title-text h1 {
-    overflow: hidden;
-    border-right: .15em solid var(--btn-color);
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-} */
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-    0% {
-        border-right-color: transparent;
-    }
-    100% {
-        border-right-color: var(--btn-color);
-    }
+  0% {
+      border-right-color: transparent;
+  }
+  100% {
+      border-right-color: var(--btn-color);
+  }
 }
 
 .title-text p, .title-text h1 {
-    overflow: hidden;
-    border-right: .15em solid transparent; /* Initially transparent */
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite 3.5s; /* Blink caret starts after typing animation */
+  overflow: hidden;
+  border-right: .15em solid transparent; /* Initially transparent */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite 3.5s; /* Blink caret starts after typing animation */
+}
+
+@media only screen and (max-width: 650px) {
+  .title-text h1 {
+      font-size: 22px;
+      padding: 0 10px;
+  }
+}
+
+/* Particle effect */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--btn-color);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleFade 1s forwards;
+}
+
+@keyframes particleFade {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
 }
