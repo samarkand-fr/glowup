@@ -1,3 +1,16 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --back-color: #e4e0dd;
+  --btn-color: #b2679ff5;
+}
+
 #banner {
   position: relative;
   width: 100%;
@@ -23,7 +36,7 @@
 
 .banner-part {
   position: absolute;
-  width: 25%; /* Assuming 4 parts */
+  width: 25%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
@@ -75,7 +88,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(135, 81, 123, 0.4), rgba(248, 243, 248, 0.253));
-  z-index: -1; 
+  z-index: -1;
 }
 
 .banner-text {
@@ -87,12 +100,29 @@
 }
 
 .logo {
-  width: 120px;
   position: absolute;
-  top: 3%;
-  left: 3%;
-  color: var(--btn-color); 
+  top: 10%;
+  left: 10%;
+  color: var(--btn-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-10%, -10%);
 }
+
+.logo .letter {
+  display: inline-block;
+  font-size: 48px;
+  opacity: 0;
+  animation: circularMove 3s ease-in-out forwards;
+}
+
+.logo .letter:nth-child(1) { animation-delay: 0s; }
+.logo .letter:nth-child(2) { animation-delay: 0.2s; }
+.logo .letter:nth-child(3) { animation-delay: 0.4s; }
+.logo .letter:nth-child(4) { animation-delay: 0.6s; }
+.logo .letter:nth-child(5) { animation-delay: 0.8s; }
+.logo .letter:nth-child(6) { animation-delay: 1s; }
 
 .banner-text h1 {
   font-size: 80px;
@@ -140,10 +170,12 @@
   color: #150118;
 }
 
-/* responsive */
+/* Responsive */
 @media only screen and (max-width: 700px) {
   .banner-text h1 {
     font-size: 44px;
+    line-height: 1.2;
+    padding: 0 10px;
   }
   .banner-btn a {
     display: block;
@@ -160,25 +192,24 @@
   }
 }
 
-/* responsive */
-@media only screen and (max-width: 700px) {
-  .banner-text h1 {
-    font-size: 44px;
-    line-height: 1.2; /* Adjust line height */
-    padding: 0 10px; /* Add padding to avoid cutting off */
+/* Logo Animation */
+@keyframes circularMove {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 0;
   }
-  .banner-btn a {
-    display: block;
-    margin: 20px auto;
+  25% {
+    transform: translate(50vw, -50vh) rotate(90deg);
+    opacity: 1;
   }
-  .logo {
-    width: 18%;
+  50% {
+    transform: translate(50vw, 50vh) rotate(180deg);
   }
-  .banner-part {
-    display: none;
+  75% {
+    transform: translate(-50vw, 50vh) rotate(270deg);
   }
-  .full-banner {
-    display: block;
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+    opacity: 1;
   }
 }
-
