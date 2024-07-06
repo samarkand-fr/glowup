@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faApple, faAndroid, faFacebook, faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faApple, faAndroid, faFacebook, faInstagram, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'; // Note: replaced faTwitter with faXing
 import { faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import beautyfooter from '../../assets/images/beauty-footer.png'
 import './styles.css'
@@ -27,7 +27,7 @@ function Footer() {
       <div className="social-link">
         <FontAwesomeIcon icon={faFacebook} className='fa'/>
         <FontAwesomeIcon icon={faInstagram} className='fa'/>
-        <FontAwesomeIcon icon={faTwitter} className='fa'/>
+        <FontAwesomeIcon icon={faXTwitter} className='fa' />
         <FontAwesomeIcon icon={faYoutube} className='fa'/>
         <p>&copy; 2023 GlowUp App. All rights reserved.</p>
       </div>
